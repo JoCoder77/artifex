@@ -138,6 +138,21 @@ h3 {
     border-radius: 24px;
 }
 
+.logo-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--fg);
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.logo-text:hover {
+    opacity: 0.7;
+}
+
 /* Navbar */
 .navbar {
     position: sticky;
