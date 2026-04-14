@@ -519,9 +519,113 @@ h3 {
     }
 }
 
-/* Showcase Section */
-.showcase {
-    padding: 100px 0;
+/* Contact Page Specifics */
+.contact-page .navbar {
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-main {
+    padding: 180px 0 100px;
+}
+
+.contact-title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    margin-bottom: 100px;
+    text-transform: capitalize;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.info-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.4;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+.info-value {
+    font-size: 1.2rem;
+    color: var(--fg);
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.name-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 15px 0;
+    color: var(--fg);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+    box-shadow: 0 4px 10px -5px rgba(0, 153, 255, 0.3);
+}
+
+.contact-submit {
+    align-self: flex-start;
+    padding: 18px 50px;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .contact-title {
+        margin-bottom: 60px;
+    }
 }
 
 .showcase-grid {
