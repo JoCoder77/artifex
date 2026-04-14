@@ -20,6 +20,7 @@ module.exports = async (req, res) => {
     const { data, error } = await resend.emails.send({
       from: 'Artifex Contact <onboarding@resend.dev>', 
       to: ['josephtsenjiaen@gmail.com'], 
+      reply_to: email, 
       subject: `New Project Inquiry from ${firstName} ${lastName}`,
       html: `
         <h2>New Inquiry from Artifex Lab</h2>
