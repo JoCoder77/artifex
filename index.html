@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifex | Digital Design Studio</title>
+    <meta name="description" content="Artifex is a premium digital design studio crafting high-end visual experiences.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@300;400;700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="grain-overlay"></div>
+    <canvas id="pattern-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo-text">ARTIFEX</div>
+                <div class="nav-links">
+                    <a href="#work" class="nav-link">Work</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#contact" class="nav-btn btn-primary btn-rainbow">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="three-container"></div>
+    <div id="cube-tooltip" class="glass">Click on me</div>
+    <button id="spin-toggle" class="glass">Spin: ON</button>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <header class="hero-header">
+                    <h1 class="display-text">ARTIFEX</h1>
+                    <p class="tagline">Coding is just art but cooler.</p>
+                </header>
+                
+                <div class="hero-logo-container" id="logo-trigger">
+                    <img src="assets/logo.png" alt="Artifex Logo" class="hero-logo-img">
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="mouse"></div>
+                    <span>Scroll to explore</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section class="showcase" id="features">
+            <div class="container showcase-grid">
+                <div class="showcase-content">
+                    <h2 class="section-title">AI Solutions Engineered for Maximum Performance</h2>
+                    <p class="section-desc">Discover intelligent tools that streamline operations, reduce manual work, and help your business move faster.</p>
+                    <a href="#pricing" class="btn-primary">Explore More ↗</a>
+                </div>
+                <div class="showcase-visual glass">
+                    <div class="dashboard-mock">
+                        <div class="mock-header">
+                            <div class="stat-group">
+                                <span class="stat-value">1,632</span>
+                                <span class="stat-label">Clicks</span>
+                            </div>
+                        </div>
+                        <div class="mock-chart">
+                            <svg viewBox="0 0 400 150" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:rgba(0, 255, 136, 0.3);stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:rgba(0, 255, 136, 0);stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <path class="chart-area" d="M0,150 L0,110 Q50,130 100,80 T200,90 T300,50 T400,10 L400,150 Z" fill="url(#chartGradient)" />
+                                <path class="chart-line" d="M0,110 Q50,130 100,80 T200,90 T300,50 T400,10" fill="none" stroke="white" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experimental Lab Compartment -->
+        <section class="lab-section" id="lab">
+            <div class="container lab-grid">
+                <div class="lab-ascii-box glass">
+                    <div id="ascii-3d-container"></div>
+                </div>
+                <div class="lab-content">
+                    <h2 class="display-small">We build beautiful websites</h2>
+                    <p class="section-desc">Merging mathematical precision with artistic digital crafts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities Grid -->
+        <section class="capabilities" id="capabilities">
+            <div class="container cap-grid">
+                <div class="cap-item">
+                    <h4>AI Automation Systems</h4>
+                    <p>Streamline your business processes with workflow automation powered by AI.</p>
+                </div>
+                <div class="cap-item">
+                    <h4>AI Development</h4>
+                    <p>Build tailored AI products that fit your business goals and internal operations.</p>
+                </div>
+                <div class="cap-item">
+                    <h4>Predictive Analytics</h4>
+                    <p>Forecast market trends, customer behavior, and sales with powerful AI insights.</p>
+                </div>
+                <div class="cap-item">
+                    <h4>Chatbots & Assistants</h4>
+                    <p>Enhance customer support with 24/7 AI-bots that understand and respond instantly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container section-header center">
+                <h2 class="section-title">Find the Perfect Plan for Your Business</h2>
+                <p>Unlock your full potential with flexible pricing</p>
+            </div>
+            <div class="container pricing-grid">
+                <div class="pricing-card glass">
+                    <div class="card-type">Free</div>
+                    <div class="card-price">$0<span>per user/month, billed annually</span></div>
+                    <ul class="features-list">
+                        <li>Unlimited Projects</li>
+                        <li>Share with 5 team members</li>
+                        <li>AI Integration</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Get Started</a>
+                </div>
+                <div class="pricing-card glass popular">
+                    <div class="badge">Popular</div>
+                    <div class="card-type">Standard</div>
+                    <div class="card-price">$85<span>per user/month, billed annually</span></div>
+                    <ul class="features-list">
+                        <li>Unlimited Projects</li>
+                        <li>AI Integration</li>
+                        <li>Migration service</li>
+                        <li>Collaborations & permissions</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card glass">
+                    <div class="card-type">Premium</div>
+                    <div class="card-price">$120<span>per user/month, billed annually</span></div>
+                    <ul class="features-list">
+                        <li>Sales volume up to $50k/mo</li>
+                        <li>Referral customer rate 2.5%</li>
+                        <li>Fully flexible permissions</li>
+                        <li>Fast support with your own CSM</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 ARTIFEX. All rights reserved.</p>
+            <div class="socials">
+                <a href="#">X / Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">Dribbble</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="patterns.js"></script>
+    <script src="ascii3d.js"></script>
+    <script src="physics.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
