@@ -633,6 +633,13 @@ h3 {
     margin-top: 20px;
 }
 
+.form-status-msg {
+    margin-top: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    min-height: 20px;
+}
+
 @media (max-width: 900px) {
     .contact-grid {
         grid-template-columns: 1fr;

@@ -1,0 +1,15 @@
+{
+  "name": "artifex-studio",
+  "version": "1.0.0",
+  "description": "Premium Digital Design Studio",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
