@@ -246,21 +246,23 @@ h3 {
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Specific Rainbow Variant */
-.btn-rainbow::before {
+/* Specific Silver Glow Variant */
+.btn-glow-silver::before {
     content: '';
     position: absolute;
-    inset: -1px; /* Tighter 1px border */
+    inset: -1px;
     background: linear-gradient(90deg, 
-        #ff0000, #ff7300, #fffb00, #48ff00, 
-        #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    background-size: 400%;
+        #ffffff, #e0e0e0, #ffffff, #999999, 
+        #ffffff, #e0e0e0, #ffffff);
+    background-size: 200%;
     z-index: -2;
     border-radius: 100px;
-    animation: rainbowShift 6s linear infinite;
+    animation: silverShift 4s linear infinite;
+    filter: blur(3px);
+    opacity: 0.9;
 }
 
-.btn-rainbow::after {
+.btn-glow-silver::after {
     content: '';
     position: absolute;
     inset: 1px;
@@ -276,7 +278,7 @@ h3 {
     box-shadow: 0 10px 20px rgba(255,255,255,0.1);
 }
 
-@keyframes rainbowShift {
+@keyframes silverShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
