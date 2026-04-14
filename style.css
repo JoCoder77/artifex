@@ -247,26 +247,30 @@ h3 {
 }
 
 /* Specific Silver Glow Variant */
+.btn-glow-silver {
+    background-color: transparent !important;
+    color: var(--fg) !important;
+}
+
 .btn-glow-silver::before {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -2px; /* Thicker 2px border */
     background: linear-gradient(90deg, 
-        #ffffff, #e0e0e0, #ffffff, #999999, 
-        #ffffff, #e0e0e0, #ffffff);
-    background-size: 200%;
+        #1a1a1a, #1a1a1a, #4d4d4d, #ffffff, #4d4d4d, #1a1a1a, #1a1a1a);
+    background-size: 200% 100%;
     z-index: -2;
     border-radius: 100px;
-    animation: silverShift 4s linear infinite;
-    filter: blur(3px);
-    opacity: 0.9;
+    animation: silverSweep 5s linear infinite;
+    filter: none;
+    opacity: 1;
 }
 
 .btn-glow-silver::after {
     content: '';
     position: absolute;
     inset: 1px;
-    background: var(--fg);
+    background: var(--bg);
     border-radius: 98px;
     z-index: -1;
     transition: background 0.3s;
@@ -278,10 +282,9 @@ h3 {
     box-shadow: 0 10px 20px rgba(255,255,255,0.1);
 }
 
-@keyframes silverShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes silverSweep {
+    0% { background-position: 200% 0%; }
+    100% { background-position: -200% 0%; }
 }
 
 /* Hero Section */
